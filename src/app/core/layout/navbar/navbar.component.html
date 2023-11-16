@@ -1,0 +1,77 @@
+<div class="flex items-center justify-between w-full h-auto xl:px-[136px] sm:px-8 px-3 py-[20px] relative" [ngStyle]="{ 'background-color': colors.whiteColor }">
+    <img src="../../../../assets/images/logo.png" class="sm:w-44 w-32 h-10 cursor-pointer" alt="">
+    <ul class="hidden lg:flex items-center justify-center xl:gap-x-[32px] gap-x-5 mt-6">
+        <li  class="pb-2 mb-5 text-black text-base Kanit"  [routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact: true}">
+            <a routerLink="/home">Home</a>
+        </li>
+        <li  class="pb-2 mb-5 text-black text-base Kanit" [routerLinkActive]="'active'">
+            <a [routerLink]="['z']">
+                Discover
+            </a>
+        </li>
+        <li  class="pb-2 mb-5 text-black text-base Kanit" [routerLinkActive]="'active'">
+            <a [routerLink]="['e']">
+                Plan your trip
+            </a>
+        </li>
+        <li  class="pb-2 mb-5 text-black text-base Kanit" [routerLinkActive]="'active'">
+            <a [routerLink]="['d']">
+                Travel experience
+            </a>
+        </li>
+        <li  class="pb-2 mb-5 text-black text-base Kanit" [routerLinkActive]="'active'">
+            <a [routerLink]="['c']">
+                Air Algerie Plus
+            </a>
+        </li>
+    </ul>
+    <div class="flex items-center justify-center gap-x-[8px]">
+        <mat-icon [ngStyle]="{ 'color': colors.grayColor}">search</mat-icon>
+        <img src="../../../../assets/images/lineVertical.png" class="cursor-pointer" alt="">
+        <div class="text-slate-400 text-base font-normal Kanit  flex items-center justify-center">
+            English
+            <div id="dropdown-menu" class="origin-top-right absolute right-16 mt-28 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5" *ngIf="viewLangage">
+                <div class="py-2 p-2 flex flex-col" role="menu" aria-orientation="vertical" aria-labelledby="dropdown-button">
+                    <div class="cursor-pointer hover:underline"  [ngStyle]="{ 'color': colors.grayColor}">Français</div>
+                    <div class="cursor-pointer hover:underline"  [ngStyle]="{ 'color': colors.grayColor}">Italien</div>
+                    <div class="cursor-pointer hover:underline"  [ngStyle]="{ 'color': colors.grayColor}">Allemand</div>
+                </div>
+            </div>
+            <div (click)="viewLangagemine()">
+                <mat-icon [ngStyle]="{ 'color': colors.grayColor}" class="cursor-pointer">expand_more</mat-icon>
+            </div>
+        </div>
+        <div [ngStyle]="{ 'color': colors.redColor}"  class="text-base font-bold Kanit cursor-pointer hover:underline flex items-center justify-center">
+            <img src="../../../../assets/images/Sign in.png" class="cursor-pointer" alt="">
+            Log in
+        </div>
+    </div>
+    <div class="lg:hidden flex cursor-pointer" (click)="viewMyList()">
+        <mat-icon>menu</mat-icon>
+    </div>
+    <ul class="lg:hidden items-start gap-y-5 absolute top-20 right-0 px-5" [ngStyle]="{ 'background-color': colors.whiteColor}" *ngIf="viewList">
+        <li  class="pb-2 mb-5 text-black text-base font-bold Kanit"  [routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact: true}">
+            <a routerLink="/home">Home</a>
+        </li>
+        <li  class="pb-2 mb-5 text-black text-base Kanit" [routerLinkActive]="'active'">
+            <a [routerLink]="['z']">
+                Discover
+            </a>
+        </li>
+        <li  class="pb-2 mb-5 text-black text-base Kanit" [routerLinkActive]="'active'">
+            <a [routerLink]="['e']">
+                Plan your trip
+            </a>
+        </li>
+        <li  class="pb-2 mb-5 text-black text-base Kanit" [routerLinkActive]="'active'">
+            <a [routerLink]="['d']">
+                Travel experience
+            </a>
+        </li>
+        <li  class="pb-2 mb-5 text-black text-base Kanit" [routerLinkActive]="'active'">
+            <a [routerLink]="['c']">
+                Air Algerie Plus
+            </a>
+        </li>
+    </ul>
+</div>

@@ -1,0 +1,14 @@
+.active {
+    position: relative;
+    font-weight: bold;
+}
+
+.active::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 70%; /* La moitié de la largeur de la bordure */
+    height: 5px; /* La hauteur de la bordure */
+    background-color: #D71920; /* Couleur de la moitié inférieure de la bordure */
+}

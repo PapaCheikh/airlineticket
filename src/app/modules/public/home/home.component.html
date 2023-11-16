@@ -1,0 +1,140 @@
+<div class="relative">
+    <div class="w-[80%] h-[790px] relative">
+        <img src="../../../../assets/images/airplane.png" alt="Votre Image" class="w-full h-full object-cover">
+        <div class="w-full h-full absolute mix-blend-multiply bg-red-600 top-0"></div>
+        <div class="hidden lg:flex lg:flex-col absolute xl:top-20 top-16 2xl:left-40 xl:left-32 left-8">
+            <div class="text-white xl:text-6xl text-5xl font-bold Kanit capitalize leading-10 mb-8">More than just a trip</div>
+            <div class="texte">Air Algérie is committed to a continuous improvement of provided services quality.</div>
+            <div class="relative mb-[16px]">
+                <div class="description"></div>
+                <div class="w-24 h-7 absolute top-5 rotate-180 mix-blend-overlay bg-red-600"></div>
+                <div class="absolute top-3 ml-[33px]">
+                    <span class="text-white text-4xl font-bold Kanit leading-10 mr-6">+7M</span>
+                    <span class="text-white text-2xl font-bold Kanit leading-10">Passengers</span>
+                </div>
+                <div class="w-80 text-white text-lg font-normal Kanit leading-relaxed absolute top-16 ml-[24px]">More than 5 million passengers transported in 2022.</div>
+            </div>
+            <div class="relative mb-[16px]">
+                <div class="description"></div>
+                <div class="w-24 h-7 absolute top-5 rotate-180 mix-blend-overlay bg-red-600"></div>
+                <div class="absolute top-3 ml-[33px]">
+                    <span class="text-white text-4xl font-bold Kanit leading-10 mr-6">+44</span>
+                    <span class="text-white text-2xl font-bold Kanit leading-10">Destinations</span>
+                </div>
+                <div class="w-80 text-white text-lg font-normal Kanit leading-relaxed absolute top-16 ml-[24px]">Four continents, with 44 international routes and 35 domestic ones.</div>
+            </div>
+            <div class="relative mb-[16px]">
+                <div class="description"></div>
+                <div class="w-24 h-7 absolute top-5 rotate-180 mix-blend-overlay bg-red-600"></div>
+                <div class="absolute top-3 ml-[33px]">
+                    <span class="text-white text-4xl font-bold Kanit leading-10 mr-6">+56</span>
+                    <span class="text-white text-2xl font-bold Kanit leading-10">Unit</span>
+                </div>
+                <div class="w-80 text-white text-lg font-normal Kanit leading-relaxed absolute top-16 ml-[24px]">A fleet of 56 aircraft meeting international safety standards.</div>
+            </div>
+        </div>
+    </div>
+    <div class="px-14 py-10 bg-white rounded-2xl shadow flex-col justify-start items-start inline-flex border absolute top-[3%] md:right-[136px] right-10 ml-3">
+        <div class="mb-[28px]">
+            <div class="text-black text-base font-normal Kanit uppercase">Departure airport</div>
+            <div class="text-red-600 text-3xl font-bold Kanit">Algiers (ALG)</div>
+            <div class="text-slate-400 text-base font-normal Kanit">Houari Boumediene Airport - ALGERIA</div>
+        </div>
+        <div class="w-6 h-6 rounded-full bg-slate-400 mb-[28px] ml-32"></div>
+        <div class="text-black text-base font-normal Kanite uppercase mb-[5px]">Arrival airport</div>
+        <div class="text-slate-400 text-3xl font-bold Kanite mb-[5px]">Select Country / City</div>
+        <div class="text-slate-400 text-base font-normal Kanite">Airport</div>
+        <div class="w-full h-px border border-slate-400 my-[32px]"></div>
+        <div class="flex items-center w-full justify-between mb-[29px]">
+            <div class="flex">
+                <mat-icon [ngStyle]="{ 'color': colors.grayColor}" class="cursor-pointer  mr-[12px]">date_range</mat-icon>
+                <div class="text-slate-400 text-base font-normal Kanite">Select departure date</div>
+            </div>
+            <mat-icon [ngStyle]="{ 'color': colors.grayColor}" class="cursor-pointer">expand_more</mat-icon>
+        </div>
+        <div class="flex items-center w-full justify-between mb-[29px]">
+            <div class="flex">
+                <mat-icon [ngStyle]="{ 'color': colors.grayColor}" class="cursor-pointer  mr-[12px]">low_priority</mat-icon>
+                <div class="text-slate-400 text-base font-normal Kanite">Select class</div>
+                <div id="dropdown-menu" class="origin-top-right absolute right-16 mt-3 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5" *ngIf="viewClass">
+                    <div class="py-2 p-2 flex flex-col" role="menu" aria-orientation="vertical" aria-labelledby="dropdown-button">
+                        <div class="cursor-pointer hover:underline"  [ngStyle]="{ 'color': colors.grayColor}">Light</div>
+                        <div class="cursor-pointer hover:underline"  [ngStyle]="{ 'color': colors.grayColor}">Dark</div>
+                        <div class="cursor-pointer hover:underline"  [ngStyle]="{ 'color': colors.grayColor}">System</div>
+                    </div>
+                </div>
+            </div>
+            <div (click)="viewmyclass()">
+                <mat-icon [ngStyle]="{ 'color': colors.grayColor}" class="cursor-pointer">expand_more</mat-icon>
+            </div>
+        </div>
+        <div class="flex items-center w-full justify-between">
+            <div class="flex">
+                <mat-icon [ngStyle]="{ 'color': colors.grayColor}" class="cursor-pointer  mr-[12px]">personn</mat-icon>
+                <div class="text-slate-400 text-base font-normal Kanite">01 Passengers</div>
+                <div id="dropdown-menu" class="origin-top-right absolute right-16 mt-3 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5" *ngIf="viewPassenger">
+                    <div class="py-2 p-2 flex flex-col" role="menu" aria-orientation="vertical" aria-labelledby="dropdown-button">
+                        <div class="cursor-pointer hover:underline"  [ngStyle]="{ 'color': colors.grayColor}">passenger1</div>
+                        <div class="cursor-pointer hover:underline"  [ngStyle]="{ 'color': colors.grayColor}">passenger2</div>
+                        <div class="cursor-pointer hover:underline"  [ngStyle]="{ 'color': colors.grayColor}">passenger3</div>
+                    </div>
+                </div>
+            </div>
+            <div (click)="viewmypassenger()">
+                <mat-icon [ngStyle]="{ 'color': colors.grayColor}" class="cursor-pointer">expand_more</mat-icon>
+            </div>
+        </div>
+        <div class="w-full h-px border border-slate-400 my-[32px]"></div>
+        <button (click)="openDialog()"  class="w-full h-14 px-12 py-4 bg-red-600 rounded-lg justify-center items-center gap-4 inline-flex text-white text-lg font-semibold">Search Flights</button>
+    </div> 
+    <div class="w-full h-auto px-6 py-[100px]">
+        <div class="text-black text-4xl font-bold Kanit capitalize mb-4 ml-24">Special offers</div>
+        <div class="w-2 h-28 origin-top-left -rotate-90 bg-red-300 ml-24"></div>
+        <div class="w-full items-center lg:flex lg:items-start justify-center lg:gap-x-5">
+            <div class="lg:w-[608px] w-full h-auto rounded-tl-2xl rounded-tr-2xl shadow-lg flex flex-col items-center justify-center mb-5">
+                <img src="../../../../assets/images/mosque.png" class="w-full h-[506px] object-cover rounded-tl-2xl rounded-tr-2xl border mb-6" alt="">
+                <div class="text-slate-400 text-base font-normal Kanit tracking-widest">SAUDI ARABIA</div>
+                <div class="text-black text-3xl font-bold Kanit mb-[16px]">Omrah</div>
+                <div class="w-96 opacity-80 text-center mb-[56px]">
+                    <span class="text-black text-lg font-normal Kanit leading-normal">Book economy class - return until 15 Jan 23<br/>from </span>
+                    <span class="text-black text-lg font-bold Kanit leading-normal">DZD 64.000</span>
+                </div>
+            </div>
+            <div class="space-y-5">
+                <div class="flex items-center justify-start gap-x-[24px] h-56 bg-white rounded-xl shadow border">
+                    <img class="lg:w-60 md:w-52 w-40 h-56 bg-black rounded-tl-xl rounded-bl-xl" src="../../../../assets/images/dubai 1.png" alt="">
+                    <div>
+                        <div class="text-slate-400 text-base font-normal Kanit tracking-widest mb-1">UNITED ARAB EMIRATES</div>
+                        <div class="text-black text-3xl font-bold Kanit mb-[16px]">Dubai</div>
+                        <div class="sm:w-80 w-auto opacity-80">
+                            <span class="text-black text-base font-normal Kanit leading-normal">Book economy class - return until 15 Jan 23<br/>from </span>
+                            <span class="text-black text-base font-bold Kanit leading-normal">DZD 82.000</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex items-center justify-start gap-x-[24px] h-56 bg-white rounded-xl shadow border">
+                    <img class="lg:w-60 md:w-52 w-40 h-56 bg-black rounded-tl-xl rounded-bl-xl" src="../../../../assets/images/paris 1.png" alt="">
+                    <div>
+                        <div class="text-slate-400 text-base font-normal Kanit tracking-widest mb-1">France</div>
+                        <div class="text-black text-3xl font-bold Kanit mb-[16px]">Paris</div>
+                        <div class="sm:w-80 w-auto opacity-80">
+                            <span class="text-black text-base font-normal Kanitleading-normal">Book economy class - return until 15 Jan 23<br/>from </span>
+                            <span class="text-black text-base font-bold Kanitleading-normal">DZD 30.790</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex items-center justify-start gap-x-[24px] h-56 bg-white rounded-xl shadow border">
+                    <img class="lg:w-60 md:w-52 w-40 h-56 bg-black rounded-tl-xl rounded-bl-xl" src="../../../../assets/images/bangkok 1.png" alt="">
+                    <div>
+                        <div class="text-slate-400 text-base font-normal Kanit tracking-widest mb-1">THAILAND</div>
+                        <div class="text-black text-3xl font-bold Kanit mb-[16px]">Bangkok</div>
+                        <div class="sm:w-80 w-auto opacity-80">
+                            <span class="text-black text-base font-normal Kanitleading-normal">Book economy class - return until 15 Jan 23<br/>from </span>
+                            <span class="text-black text-base font-bold Kanitleading-normal">DZD 55.000</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

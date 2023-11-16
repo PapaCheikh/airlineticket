@@ -1,0 +1,10 @@
+<div class="w-full h-auto md:px-[136px] sm:px-8 px-3 py-[16px] flex items-center justify-between" [ngStyle]="{ 'background-color': colors.blackColor }" *ngIf="viewImportant" >
+    <div class="flex items-center justify-center gap-2" >
+        <mat-icon [ngStyle]="{ 'color': colors.whiteColor  }">error</mat-icon>
+        <div [ngStyle]="{ 'color': colors.grayColor  }" class="md:text-base text-sm font-bold Kanit">Important:</div>
+        <div [ngStyle]="{ 'color': colors.whiteColor  }" class="md:text-base text-sm font-normal Kanit">COVID-19 update & travel requirements</div>
+    </div>
+    <div class="cursor-pointer" (click)="closeImportant()">
+        <mat-icon [ngStyle]="{ 'color': colors.whiteColor  }">close</mat-icon>
+    </div>
+</div>
